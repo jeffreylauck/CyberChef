@@ -150,9 +150,7 @@ module.exports = function (grunt) {
                 output: {
                     path: __dirname + "/build/prod",
                     filename: (chunkData) => {
-                        return chunkData.chunk.name === "main"
-                            ? "assets/[name].js"
-                            : "[name].js";
+                        return chunkData.chunk.name === "main" ? "assets/[name].js" : "[name].js";
                     },
                     globalObject: "this",
                 },
